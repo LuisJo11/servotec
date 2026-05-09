@@ -73,11 +73,11 @@ a {
 .brand {
   display: flex;
   align-items: center;
-  width: clamp(190px, 22vw, 310px);
-  padding: 10px 14px;
-  background: rgba(255, 255, 255, 0.94);
+  width: clamp(220px, 24vw, 360px);
+  padding: 12px 16px;
+  background: rgba(255, 255, 255, 0.98);
   border-radius: 8px;
-  box-shadow: 0 16px 38px rgba(6, 24, 115, 0.2);
+  box-shadow: 0 18px 44px rgba(6, 24, 115, 0.24);
 }
 
 .site-nav {
@@ -162,19 +162,6 @@ a {
   width: min(1120px, calc(100% - 40px));
   margin: 0 auto;
   padding: 150px 0 138px;
-}
-
-.hero__logo {
-  width: clamp(260px, 34vw, 470px);
-  margin-bottom: 34px;
-  padding: clamp(14px, 2vw, 22px);
-  background: rgba(255, 255, 255, 0.96);
-  border-radius: 8px;
-  box-shadow: 0 28px 70px rgba(0, 0, 0, 0.28);
-}
-
-.hero__logo img {
-  width: 100%;
 }
 
 .eyebrow {
@@ -733,7 +720,7 @@ p {
   }
 
   .brand {
-    width: 158px;
+    width: 174px;
     padding: 8px 10px;
   }
 
@@ -744,11 +731,6 @@ p {
   .hero__content {
     width: calc(100% - 32px);
     padding: 132px 0 112px;
-  }
-
-  .hero__logo {
-    width: min(100%, 330px);
-    margin-bottom: 24px;
   }
 
   h1 {
