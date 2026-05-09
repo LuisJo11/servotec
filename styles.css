@@ -73,10 +73,11 @@ a {
 .brand {
   display: flex;
   align-items: center;
-  width: clamp(150px, 18vw, 230px);
-  padding: 8px 10px;
+  width: clamp(190px, 22vw, 310px);
+  padding: 10px 14px;
   background: rgba(255, 255, 255, 0.94);
   border-radius: 8px;
+  box-shadow: 0 16px 38px rgba(6, 24, 115, 0.2);
 }
 
 .site-nav {
@@ -163,6 +164,19 @@ a {
   padding: 150px 0 138px;
 }
 
+.hero__logo {
+  width: clamp(260px, 34vw, 470px);
+  margin-bottom: 34px;
+  padding: clamp(14px, 2vw, 22px);
+  background: rgba(255, 255, 255, 0.96);
+  border-radius: 8px;
+  box-shadow: 0 28px 70px rgba(0, 0, 0, 0.28);
+}
+
+.hero__logo img {
+  width: 100%;
+}
+
 .eyebrow {
   margin: 0 0 18px;
   color: var(--amber);
@@ -174,6 +188,10 @@ a {
 
 .eyebrow--dark {
   color: var(--blue);
+}
+
+.brand-word {
+  text-transform: none;
 }
 
 h1,
@@ -715,7 +733,8 @@ p {
   }
 
   .brand {
-    width: 150px;
+    width: 158px;
+    padding: 8px 10px;
   }
 
   .hero {
@@ -725,6 +744,11 @@ p {
   .hero__content {
     width: calc(100% - 32px);
     padding: 132px 0 112px;
+  }
+
+  .hero__logo {
+    width: min(100%, 330px);
+    margin-bottom: 24px;
   }
 
   h1 {
