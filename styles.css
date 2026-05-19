@@ -50,7 +50,7 @@ a {
 }
 
 .site-header {
-  position: fixed;
+  position: absolute;
   inset: 0 0 auto;
   z-index: 20;
   display: flex;
@@ -64,20 +64,46 @@ a {
 
 .site-header.is-scrolled,
 .site-header.is-open {
-  background: rgba(255, 255, 255, 0.96);
-  box-shadow: 0 12px 34px rgba(8, 18, 41, 0.1);
-  color: var(--ink);
-  padding-block: 12px;
+  background: transparent;
+  box-shadow: none;
+  color: var(--white);
+  padding-block: 18px;
 }
 
 .brand {
   display: flex;
   align-items: center;
-  width: clamp(220px, 24vw, 360px);
-  padding: 14px 18px;
-  background: linear-gradient(135deg, rgba(220, 237, 255, 0.98), rgba(186, 219, 246, 0.94));
-  border-radius: 8px;
-  box-shadow: 0 18px 44px rgba(6, 24, 115, 0.24);
+  width: clamp(230px, 25vw, 380px);
+  padding: 0;
+  background: transparent;
+  border-radius: 0;
+  filter: drop-shadow(0 14px 28px rgba(2, 10, 32, 0.28));
+}
+
+.container-section-menu-2 {
+  display: flex;
+}
+
+.container-display-flex-2 {
+  margin-top: 0px;
+  color: black;
+  margin-bottom: 50px;
+  display: flex;
+  justify-content: end;
+}
+
+.container-display-flex-3 {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+
+.menu-selected-2 {
+  color: var(--blue);
+}
+
+.menu-selected-3 {
+  color: var(--amber);
 }
 
 .site-nav {
@@ -167,7 +193,7 @@ a {
 .eyebrow {
   margin: 0 0 18px;
   color: var(--amber);
-  font-size: 0.78rem;
+  font-size: 1.2rem;
   font-weight: 800;
   text-transform: uppercase;
   letter-spacing: 0;
@@ -221,6 +247,7 @@ p {
   font-size: clamp(1.35rem, 2.5vw, 2rem);
   line-height: 1.45;
   font-weight: 700;
+  overflow-wrap: break-word;
 }
 
 .hero__actions {
@@ -282,8 +309,8 @@ p {
 .hero__facts strong {
   margin-bottom: 8px;
   color: var(--navy);
-  font-size: clamp(1.5rem, 3vw, 2.3rem);
-  line-height: 1;
+  font-size: clamp(1.35rem, 2.5vw, 2.05rem);
+  line-height: 1.08;
 }
 
 .hero__facts span {
@@ -329,6 +356,8 @@ p {
 }
 
 .service-card {
+  position: relative;
+  overflow: hidden;
   min-height: 300px;
   padding: 28px;
   background: var(--white);
@@ -336,6 +365,54 @@ p {
   border-radius: 8px;
   box-shadow: 0 14px 38px rgba(8, 18, 41, 0.06);
 }
+
+.service-card > * {
+  position: relative;
+  z-index: 1;
+}
+
+.service-card--watermark {
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.92), rgba(255, 255, 255, 0.88)),
+    var(--white);
+}
+
+.service-card--watermark::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-position: center;
+  background-size: cover;
+  opacity: 0.24;
+  filter: saturate(1.05);
+}
+
+.service-card--watermark h3 {
+  color: #020817;
+}
+
+.service-card--watermark p {
+  color: #172033;
+  font-weight: 600;
+}
+
+.service-card--renta::before {
+  background-image: url("assets/service-renta-watermark.jpeg");
+}
+
+.service-card--adiestramiento::before {
+  background-image: url("assets/service-adiestramiento-watermark.jpeg");
+}
+
+.service-card--construccion::before {
+  background-image: url("assets/service-service-construccion-watermark.jpeg");
+}
+
+.service-card--asesoria::before {
+  background-image: url("assets/service-service-asesoria-watermark.jpeg");
+}
+
+
 
 .service-card__icon {
   width: 48px;
@@ -394,6 +471,12 @@ p {
 .fleet__content p {
   font-size: 1.05rem;
 }
+
+.fleet-h2 {
+  font-size: 38px;
+}
+
+
 
 .check-list {
   display: grid;
@@ -627,10 +710,10 @@ p {
 }
 
 .site-footer img {
-  width: 190px;
-  padding: 8px 10px;
-  border-radius: 8px;
-  background: linear-gradient(135deg, #e3f0ff, #c2ddf4);
+  width: 210px;
+  padding: 0;
+  border-radius: 0;
+  background: transparent;
 }
 
 .site-footer__content {
@@ -725,8 +808,8 @@ p {
   }
 
   .brand {
-    width: 174px;
-    padding: 8px 10px;
+    width: 178px;
+    padding: 0;
   }
 
   .hero {
@@ -743,7 +826,8 @@ p {
   }
 
   .hero__lead {
-    font-size: clamp(1.08rem, 6vw, 1.55rem);
+    font-size: clamp(1.02rem, 5.2vw, 1.32rem);
+    line-height: 1.5;
   }
 
   .hero__actions,

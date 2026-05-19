@@ -2,13 +2,6 @@ const header = document.querySelector("[data-header]");
 const nav = document.querySelector("[data-nav]");
 const menuButton = document.querySelector("[data-menu-button]");
 
-const setHeaderState = () => {
-  header.classList.toggle("is-scrolled", window.scrollY > 24);
-};
-
-setHeaderState();
-window.addEventListener("scroll", setHeaderState, { passive: true });
-
 menuButton.addEventListener("click", () => {
   const isOpen = nav.classList.toggle("is-open");
   header.classList.toggle("is-open", isOpen);
